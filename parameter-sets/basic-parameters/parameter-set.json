@@ -1,0 +1,201 @@
+{
+    "meta" : {
+        "label": "Meteonomiqs plans",
+        "description": "Choice the plan for getting weather data.",
+        "icon": "icon-file-alt"
+    },
+
+    "defaultDefinableInline": true,
+    "defaultDefinableAtProjectLevel": true,
+    "pluginParams": [
+        {
+          "type": "SELECT",
+          "name": "plan",
+          "label": "Choose your plan",
+          "selectChoices": [
+            { "value": "trial", "label": "Trial"},
+            { "value": "basic", "label": "Basic"},
+            { "value": "premium", "label": "Premium"}
+          ],
+          "mandatory": true,
+          "defaultValue": "trial",
+          "description": "For plan details and other plans check www.meteonomiqs.com or contact info@meteonomiqs.com."
+        },
+        {
+            "name": "default_token",
+            "label": "Meteonomiqs token",
+            "type": "STRING",
+            "defaultValue": "55f7fda9c5msh0a1476153506d0dp198cb2jsn7e6ab8d09e5e",
+            "description": "",
+            "mandatory": true,
+            "visibilityCondition" : false
+        },
+        {
+            "name": "other_token",
+            "label": "Meteonomiqs token",
+            "type": "STRING",
+            "defaultValue": "",
+            "description": "",
+            "mandatory": true,
+            "visibilityCondition" : "model.plan != 'trial'"
+        },
+        {
+            "name": "latitude",
+            "label": "Latitude of the location",
+            "type": "DOUBLE",
+            "description": "",
+            "mandatory": true
+        },
+        {
+            "name": "longitude",
+            "label": "Longitude of the location",
+            "type": "DOUBLE",
+            "description": "",
+            "mandatory": true
+        },
+        {
+            "name": "cache_folder",
+            "label": "Cache folder",
+            "type": "STRING",
+            "defaultValue": "${dip.home}/tmp/meteonomiqs",
+            "description": "Store weather data to save API calls.",
+            "mandatory": true,
+            "visibilityCondition" : false
+        },
+        {
+            "name": "cache_size",
+            "label": "Cache size",
+            "type": "INT",
+            "defaultValue": 1000,
+            "description": "Cache size in MB.",
+            "mandatory": true,
+            "visibilityCondition" : false
+        },
+        {
+            "name": "cache_policy",
+            "label": "Cache policy",
+            "description": "Handle cache cleansing, when cache size limit is reached.",
+            "type": "SELECT",
+            "selectChoices": [
+            {
+                "value": "least-recently-stored",
+                "label": "Remove oldest first"
+            },
+            {
+                "value": "least-recently-used",
+                "label": "Remove least used first"
+            },
+            {
+                "value": "least-frequently-used",
+                "label": "Remove least frequently used first"
+            },
+            {
+                "value": "none",
+                "label": "No handle"
+            }],
+             "defaultValue": "least-recently-stored",
+             "visibilityCondition": false
+
+        },
+        {
+            "name": "use_cache",
+            "label": "Use cache",
+            "type": "BOOLEAN",
+            "defaultValue": true,
+            "description": "Choose if you want to use cache. With cache you have less API calls, but you might not have the latest forecast."
+        },
+        {
+            "name": "api_limit",
+            "label": "API limit",
+            "type": "INT",
+            "defaultValue": 10,
+            "description": "API call limit per day, -1 if you have basis or premium plan.",
+            "visibilityCondition" : false,
+            "mandatory": true
+        },
+        {
+            "name": "units_temperature",
+            "label": "Temperature units",
+            "type": "SELECT",
+            "defaultValue": "C",
+            "selectChoices": [
+                {
+                    "value": "C",
+                    "label": "Celsius"
+                },
+                {
+                    "value": "F",
+                    "label": "Fahrenheit"
+                },
+                {
+                    "value": "K",
+                    "label": "Kelvin"
+                }
+            ],
+            "visibilityCondition" : false
+        },
+        {
+            "name": "units_wind",
+            "label": "Wind speed units",
+            "type": "SELECT",
+            "defaultValue": "ms",
+            "selectChoices": [
+                {
+                    "value": "ms",
+                    "label": "meter/second"
+                },
+                {
+                    "value": "kmh",
+                    "label": "kilometers/hour"
+                },
+                {
+                    "value": "mih",
+                    "label": "mile/hour"
+                }
+            ],
+            "visibilityCondition" : false
+        },
+        {
+            "name": "units_pressure",
+            "label": "Pressure units",
+            "type": "SELECT",
+            "defaultValue": "hPa",
+            "selectChoices": [
+                {
+                    "value": "hPa",
+                    "label": "hPa"
+                },
+                {
+                    "value": "Pa",
+                    "label": "Pascal"
+                },
+                {
+                    "value": "mbar",
+                    "label": "mbar"
+                },
+                {
+                    "value": "atm",
+                    "label": "Standard atmosphere"
+                }
+            ],
+            "visibilityCondition" : false
+        },
+        {
+            "name": "language",
+            "label": "Language",
+            "type": "SELECT",
+            "defaultValue": "en",
+            "selectChoices": [
+                {
+                    "value": "en",
+                    "label": "English"
+                },
+                {
+                    "value": "de",
+                    "label": "Deutsch"
+                }
+            ],
+            "visibilityCondition" : false
+        }
+    ]
+}
