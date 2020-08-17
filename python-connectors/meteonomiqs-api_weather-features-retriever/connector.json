@@ -1,31 +1,19 @@
 {
     "meta" : {
         "label": "Meteonomiqs weather data",
-
         "description": "Get future weather condition data from any location of the world",
-
-        // icon: must be one of the FontAwesome 3.2.1 icons, complete list here at https://fontawesome.com/v3.2.1/icons/
-        "icon": "icon-puzzle-piece"
+        "icon": "icon-sun"
     },
 
     "readable": true,
     "writable": false,
 
-    /* params:
-    DSS will generate a formular from this list of requested parameters.
-    Your component code can then access the value provided by users using the "name" field of each parameter.
-
-    Available parameter types include:
-    STRING, INT, DOUBLE, BOOLEAN, DATE, SELECT, TEXTAREA, PRESET and others.
-
-    For the full list and for more details, see the documentation: https://doc.dataiku.com/dss/latest/plugins/reference/params.html
-    */
     "params": [
         {
             "name": "basic_parameters",
             "label": "Meteonomiqs plans",
             "type": "PRESET",
-            "parameterSetId": "basic",
+            "parameterSetId": "basic-parameters",
             "mandatory": true,
             "description": "Choice your plan"
         }
