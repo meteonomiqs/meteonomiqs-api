@@ -1,61 +1,46 @@
 About us:
-
-Meteonomiqs is the B2B brand of wetter.com, the largest weather forecasting platform in the DACH region.
-For the past 15 years we have been collecting and analysing weather data with our own meteorological unit, in order to provide the most accurate forecast possible for any given location in the world.
-Meteonomiqs was launched in 2019 to share this knowledge to all professionnals and corporates around the world. 
-We believe that weather is still an under-valued key business component.
-Hence, our team of data scientists is constantly working together with companies to provide the most suitable weather data for ML and AI use cases.
+Meteonomiqs is the B2B brand of wetter.com, the largest weather forecasting platform in the DACH region. For the past 15 years we have been collecting and analyzing weather data with our own meteorological unit, to provide the most accurate forecast possible for any given location in the world. Meteonomiqs was launched in 2019 to share this knowledge to all professionals and corporates around the world. We believe that weather is still an under-valued key business component. Hence, our team of data scientists is constantly working together with companies to provide the most suitable weather data for ML and AI use cases.
 
 Plugin:
-This plugin provides weather forecasts in Dataiku DSS through the Meteonomiqs API.
-For a given location (latitude/longitude), you can get weather forecasts on daily (free) or hourly level.
-The following information are available:
-weather state : Description of the weather (in German)
-prec [l/m^2] : Precipitation 
-prec_probability [%] : Precipitation probability
-sun hours [h] : Sun hours
-wind direction : Wind direction
-min wind [km/h] : Minimal wind speed
-max wind [km/h] : Maximal wind speed
-min temperature [C] : Minimum temperature
-max temperature [C] : Maximal temperature
-min windchill [C] : Minimum windchill
-max windchill [C] : Maximum windchill
-air pressure [hPa]: Air pressure
-cloud cover : Cloud cover
-relativeHumidity [%] : Relative humidity
+This plugin provides weather forecasts in Dataiku DSS through the Meteonomiqs API. For a given location (latitude/longitude), you can get weather forecasts on daily (free) or hourly level. The following information are available:
+•	weather state: Description of the weather (in German)
+•	prec [l/m^2]: Precipitation 
+•	prec_probability [%]: Precipitation probability
+•	sun hours [h]: Sun hours
+•	wind direction: Wind direction
+•	min wind [km/h]: Minimal wind speed
+•	max wind [km/h]: Maximal wind speed
+•	min temperature [C]: Minimum temperature
+•	max temperature [C]: Maximal temperature
+•	min windchill [C]: Minimum windchill
+•	max windchill [C]: Maximum windchill
+•	air pressure [hPa]: Air pressure
+•	cloud cover [1/8]: Cloud cover
+•	relativeHumidity [%]: Relative humidity
 
-dawn : Time of dawn
-sunrise : Time of sunrise
-suntransit : Time of suntransit
-sunset : Time of sunset
-dusk : Time of dusk
-moonrise : Time of moonrise
-moontransit : Time of moontransit
-moonset : Time of moonset
-moonphase : Moonphase (1: New Moon, 2: Waxing crescent, 3: First Quarter, 4: Waxing gibbous, 5: Full Moon, 6: Waning gibbous, 7: Last Quarter, 8: Waning crescen)
-moonzodiac : Moonzodiac (1: Aries, 2: Taurus, 3: Gemini, 4: Cancer, 5: Leo, 6: Virgo, 7: Libra, 8: Scorpio, 9: Sagittarius, 10: Capricorn, 11: Aquarius, 12: Pisces)
+•	dawn: Time of dawn
+•	sunrise: Time of sunrise
+•	suntransit: Time of suntransit
+•	sunset: Time of sunset
+•	dusk: Time of dusk
+•	moonrise: Time of moonrise
+•	moontransit: Time of moontransit
+•	moonset: Time of moonset
+•	moonphase: Moonphase (1: New Moon, 2: Waxing crescent, 3: First Quarter, 4: Waxing gibbous, 5: Full Moon, 6: Waning gibbous, 7: Last Quarter, 8: Waning crescent)
+•	moonzodiac: Moonzodiac (1: Aries, 2: Taurus, 3: Gemini, 4: Cancer, 5: Leo, 6: Virgo, 7: Libra, 8: Scorpio, 9: Sagittarius, 10: Capricorn, 11: Aquarius, 12: Pisces)
 
-With these data you can enrich your projects and machine learning models by including the weather factor.
+With these data you can enrich your projects and machine learning models by including the weather factor. But that is not all! We also collect and analyze a lot of other data, not available via the API. Just shoot us a short email (info@meteonomiqs.com) to get the full catalogue and pricing.
 
-But that is not all!
-We also collect and analyse a lot of other data, not availabe via the API.
-Just shoot us a short email : info@meteonomiqs.com to get the full catalogue and pricing.
-
-List of other data available on demand :
-
-Historical data up to 20 years from all over the world
-dew point [C]: Dew Point
-evaporation pressure : Evaporation pressure
-minimum temperature anomaly [C] : Difference between minimum temperature and long-time minimum temperature of that day
-average temperature anomaly [C] : Difference between average temperature and long-time average temperature of that day
-maximum temperature anomaly [C] : Difference between maximum temperature and long-time maximum temperature of that day
+List of other data available on demand:
+•	Historical data up to 20 years from all over the world
+•	dew point [C]: Dew Point
+•	evaporation pressure: Evaporation pressure
+•	minimum temperature anomaly [C]: Difference between minimum temperature and long-time minimum temperature of that day
+•	average temperature anomaly [C]: Difference between average temperature and long-time average temperature of that day
+•	maximum temperature anomaly [C]: Difference between maximum temperature and long-time maximum temperature of that day
 
 How To Use:
-After installation, open or create a project, then create a new dataset with the meteonomiqs API. 
-Select the trial plan for the free version, fill lat/lon, click on “Test & Get schema” and then on “create”.
+After installation, open or create a project, then create a new dataset with the Meteonomiqs API. Select the trial plan for the free version, fill lat/lon, click on “Test & Get schema” and then on “create”.
 
-Additionnal Information:
-To reduce the number of API calls, a cache is used by the plugin.
-The plugin is only useable with a cache.
-For further information contact us: info@meteonomiqs.com.
+Additional Information:
+To reduce the number of API calls, a cache is used by the plugin. The plugin is only useable with a cache. For further information contact us: info@meteonomiqs.com.
