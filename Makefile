@@ -6,5 +6,3 @@ plugin:
 	rm -rf dist
 	mkdir dist
 	zip -r dist/dss-plugin-${PLUGIN_ID}-${PLUGIN_VERSION}.zip parameter-sets python-connectors python-lib plugin.json
-
-include ../Makefile.inc
