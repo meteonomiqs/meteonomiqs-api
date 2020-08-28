@@ -7,7 +7,7 @@
         "author": "meteonomiqs",
 		"icon": "icon-sun",
         "tags": ["API", "Enrichment", "Geospatial"],
-        "url": "",
+        "url": "https://www.dataiku.com/product/plugins/meteonomiqs-api/",
         "licenseInfo": "Apache Software License"
     }
 }
